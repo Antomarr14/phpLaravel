@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-            <div class="card-header bg-primary text-white">Ver docente</div>
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    Ver docente
+                </div>
 
                 <div class="card-body">
                     <div class="mb-3">

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\DocenteGrupo;
 use Illuminate\Http\Request;
-
 use App\Models\Docente;
 use App\Models\Grupo;
 
@@ -52,6 +51,20 @@ class DocenteGrupoController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function show($id)
+    {
+        $docenteGrupo = DocenteGrupo::find($id);
+
+        if (!$docenteGrupo) {
+            return abort(404);
+        }
+
+        return view('docentes_grupos.show', compact('docenteGrupo'));
+    }
+
+    /**
      * Show the form for editing the specified resource.
      */
     public function edit($id)
@@ -85,6 +98,16 @@ class DocenteGrupoController extends Controller
         $docenteGrupo->save();
 
         return redirect()->route('docentes_grupos.index')->with('success', 'Docente grupo actualizado correctamente.');
+    }
+    public function delete($id)
+    {
+        $docenteGrupo = DocenteGrupo::find($id);
+
+        if(!$docenteGrupo){
+            return abort(404);
+        }
+
+        return view('docentes_grupos.delete', compact('docenteGrupo'));
     }
 
     /**

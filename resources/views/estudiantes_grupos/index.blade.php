@@ -48,7 +48,7 @@
                             <div class="btn-group" role="group">
                                 <a href="{{ route('estudiantes_grupos.edit', $estudianteGrupo->id) }}" class="btn btn-warning btn-sm">Editar</a>
                                 <a href="{{ route('estudiantes_grupos.show', $estudianteGrupo->id) }}" class="btn btn-info btn-sm">Ver</a>
-                                <a href="{{ route('estudiantes_grupos.delete', $estudianteGrupo->id) }}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Eliminar</a>
+                                <a href="{{ route('estudiantes_grupos.delete', $estudianteGrupo->id) }}" class="btn btn-danger btn-sm">Eliminar</a>
                             </div>
                         </td>
                     </tr>

@@ -22,7 +22,7 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <h2 class="card-title">Últimas Noticias</h2>
-                    <p class="card-text">Mantente al día con las últimas novedades sobre estudiantes y docentes</p>
+                    <p class="card-text">Mantente al día con las últimas novedades sobre estudiantes y docentes.</p>
                 </div>
             </div>
         </div>

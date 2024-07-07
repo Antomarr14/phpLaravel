@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header bg-danger text-white">Eliminar docente grupo</div>
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    Eliminar docente grupo
+                </div>
 
                 <div class="card-body">
                     <form action="{{ route('docentes_grupos.destroy', $docenteGrupo->id) }}" method="POST">
@@ -15,7 +17,7 @@
                         <div class="mb-3">
                             <label for="docente_nombre" class="form-label">Docente</label>
                             <input type="text" class="form-control" id="docente_nombre" 
-                            value="{{ $docenteGrupo->docente->nombre }} {{ $docenteGrupo->docente->apellido }}" disabled>
+                                value="{{ $docenteGrupo->docente->nombre }} {{ $docenteGrupo->docente->apellido }}" disabled>
                         </div>
 
                         <div class="mb-3">
@@ -24,8 +26,8 @@
                             value="{{ $docenteGrupo->grupo->nombre }}" disabled>
                         </div>
 
-                        <div class="text-end">
-                            <button type="submit" class="btn btn-danger me-2">Eliminar</button>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-danger me-2" onclick="return confirm('¿Estás seguro?')">Eliminar</button>
                             <a href="{{ route('docentes_grupos.index') }}" class="btn btn-secondary">Cancelar</a>
                         </div>
                     </form>

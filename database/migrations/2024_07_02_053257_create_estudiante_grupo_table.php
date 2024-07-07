@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('grupo_id')->unsigned();
             $table->integer('estudiante_id')->unsigned();
             $table->foreign('grupo_id')->references('id')->on('grupo');
-            $table->foreign('estudiante_id')->references('id')->on('estudiante');
+            $table->foreign('estudiante_id')->references('id')->on('estudiantes');
         });
     }
 

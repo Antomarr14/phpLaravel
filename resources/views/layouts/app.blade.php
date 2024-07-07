@@ -33,8 +33,8 @@
                         <li><a class="dropdown-item" href="{{ route('docentes.logout') }}">Cerrar sesión</a></li>
                         @else
                         <li><a class="dropdown-item" href="{{ route('docentes.showLoginForm') }}">iniciar sesión docentes</a></li>
-                        <li><a class="dropdown-item" href="{{ route('estudiantes.logout') }}">Cerrar sesión</a></li>
                         <li><a class="dropdown-item" href="{{ route('estudiantes.showLoginForm') }}">iniciar sesión estudiantes</a></li>
+                        <li><a class="dropdown-item" href="{{ route('estudiantes.logout') }}">Cerrar sesión</a></li>
                         @endif
                     </ul>
                 </li>
@@ -66,6 +66,10 @@
                             <a class="nav-link" href="{{ route('estudiantes_grupos.index') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Estudiantes Grupo
+                            </a>
+                            <a class="nav-link" href="{{ route('asistencias.index') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Asistencia
                             </a>
                             @endif
                         </div>

@@ -13,10 +13,7 @@
         @csrf
         <div class="row mb-3">
             <div class="col-sm-4">
-                <input type="text" class="form-control" name="nombre" placeholder="Buscar por nombre">
-            </div>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" name="apellido" placeholder="Buscar por apellido">
+                <input type="text" class="form-control" name="nombre" placeholder="Buscar grupo">
             </div>
             <div class="col-sm-4 d-flex">
                 <button type="submit" class="btn btn-primary btn-sm me-2">Buscar</button>

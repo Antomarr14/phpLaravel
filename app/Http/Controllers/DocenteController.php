@@ -128,7 +128,7 @@ class DocenteController extends Controller
     $credentials = $request->only('email', 'password');
 
     if (Auth::guard('docente')->attempt($credentials)) {
-        return redirect()->intended();
+        return redirect()->route('docentes.index');
     }
 
     return redirect()->back()->withErrors([
@@ -136,9 +136,10 @@ class DocenteController extends Controller
     ]);
 }
 
-    public function logout()
-    {
-        Auth::guard('docente')->logout();
-        return redirect()->route('docentes.showLoginForm');
-    }
+public function logout()
+{
+    Auth::guard('docente')->logout();
+    return redirect()->route('home');
+}
+
 }

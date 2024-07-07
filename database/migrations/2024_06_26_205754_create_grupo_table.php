@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('grupo', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre', 255) -> nulleable(false);
-            $table->text('descripcion') -> nulleable();
+            $table->string('descripcion') -> nulleable();
         });
     }
 

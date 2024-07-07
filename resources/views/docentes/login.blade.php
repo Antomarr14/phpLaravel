@@ -4,28 +4,40 @@
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h1 class="text-center">Login docente</h1>
-            <form action="{{ route('docentes.login') }}" method="POST">
-                @csrf
-                <div class="form-group">
-                    <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    <h1>Login docente</h1>
                 </div>
-                <div class="form-group">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
-                </div>
-                <div class="row mt-3 d-grid gap-2 col-6 mx-auto">
-                    <button type="submit" class="btn btn-primary btn-block">Login</button>
-                </div>
-                <div class="form-group">
-                    @error('InvalidCredentials')
-                    <div class="alert alert-danger mt-3" role="alert">
-                        {{ $message }}
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <img src="https://th.bing.com/th/id/OIP.RC0cyJus1f01n6Z50RHm8gAAAA?w=135&h=150&c=7&r=0&o=5&pid=1.7" class="img-fluid" alt="Imagen de login">
                     </div>
-                    @enderror
+
+                    <form action="{{ route('docentes.login') }}" method="POST">
+                        @csrf
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </div>
+
+                        @error('InvalidCredentials')
+                        <div class="alert alert-danger mt-3" role="alert">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
